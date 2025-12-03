@@ -1,17 +1,18 @@
 # frozen_string_literal: true
+require 'pry'
 
 module Usgs
   class Client
-    include Utils
     include Site
-    # include InstantaneousValues
+    include InstantaneousValues
     # include DailyValues
 
     attr_reader :timeout, :user_agent
 
-    def initialize(timeout: 30, user_agent: "usgs-ruby/#{Usgs::VERSION}")
+    def initialize(timeout: 30, user_agent: "usgs-ruby/#{Usgs::VERSION}", debug: false)
       @timeout    = timeout
       @user_agent = user_agent
+      @debug = debug
     end
 
     # Base URL for USGS Water Services
@@ -20,12 +21,12 @@ module Usgs
     end
 
     # Public: Perform GET and return parsed JSON
-    def get_json(path, query = {})
+    def api_get(path, query = {})
       query = query.compact
       url   = "#{base_url}#{path}"
 
-      response = fetch_url(url, query: query, timeout: timeout, user_agent: user_agent)
-      JSON.parse(response.body)
+      # binding.pry
+      fetch_url(url, query: query, timeout: timeout, user_agent: user_agent)
     end
 
     private

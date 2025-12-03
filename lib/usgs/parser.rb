@@ -4,7 +4,7 @@ module Usgs
   class Parser
     class << self
       def parse_sites(response)
-        Parsers::SiteParser.parse_sites(response)
+        Parsers::RdbParser.parse(response)
       end
 
       def parse_time_series(response, timescale: :instantaneous)

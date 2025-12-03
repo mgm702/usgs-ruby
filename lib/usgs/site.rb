@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-include 'pry'
+require 'pry'
 
 module Usgs
   module Site
@@ -26,7 +26,7 @@ module Usgs
                   site_type: nil, site_status: "all", parameter_cd: nil)
 
       query = {
-        format: "json",
+        format: "rdb",
         stateCd: state_cd,
         countyCd: county_cd,
         huc: huc,
@@ -48,8 +48,9 @@ module Usgs
         raise ArgumentError, "You must provide at least one major filter: state_cd, county_cd, huc, bBox, or site_name"
       end
 
-      response = get_json("/site/", query)
-      Parser.parse_sites(response)
+      response = api_get("/site/", query)
+      binding.pry
+      Parser.parse_sites(response.body).map { |row| Usgs::Models::Site.new(row) }
     end
 
     # Common parameter codes — can be used as symbols

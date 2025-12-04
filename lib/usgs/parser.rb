@@ -12,7 +12,11 @@ module Usgs
       end
 
       def parse_instantaneous_values(response)
-        Parsers::InstantaneousValuesParser.parse_instantaneous_values(response)
+        Parsers::InstantaneousValuesParser.parse(response)
+      end
+
+      def parse_statistics(response)
+        Parsers::StatisticsParser.parse(response)
       end
     end
   end

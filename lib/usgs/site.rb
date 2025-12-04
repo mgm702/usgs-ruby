@@ -49,7 +49,6 @@ module Usgs
       end
 
       response = api_get("/site/", query)
-      binding.pry
       Parser.parse_sites(response.body).map { |row| Usgs::Models::Site.new(row) }
     end
 

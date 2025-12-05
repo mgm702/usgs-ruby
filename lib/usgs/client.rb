@@ -5,7 +5,7 @@ module Usgs
   class Client
     include Site
     include InstantaneousValues
-    # include DailyValues
+    include Statistics
 
     attr_reader :timeout, :user_agent
 

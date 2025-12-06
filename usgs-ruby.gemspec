@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/usgs/ruby/version"
+require_relative "lib/usgs/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "usgs-ruby"

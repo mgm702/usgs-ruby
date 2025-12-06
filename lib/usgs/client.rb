@@ -1,60 +1,65 @@
 # frozen_string_literal: true
+require 'pry'
 
 module Usgs
-  # Main client class for interacting with USGS Water Services API
-  #
-  # @example Basic usage
-  #   Usgs.client.get_sites(state_cd: "CO")
-  #
-  # @example With custom timeout
-  #   client = Usgs::Client.new(timeout: 60)
   class Client
-    include HTTParty
-    base_uri Usgs.config.base_url
-
     include Site
     include InstantaneousValues
-    include DailyValues
+    include Statistics
 
     attr_reader :timeout, :user_agent
 
-    # Initialize a new USGS client
-    #
-    # @param timeout [Integer] Request timeout in seconds (default: 30)
-    # @param user_agent [String] Custom User-Agent header
-    def initialize(timeout: 30, user_agent: "usgs-ruby/#{Usgs::VERSION}")
-      @timeout     = timeout
-      @user_agent  = user_agent
+    def initialize(timeout: 30, user_agent: "usgs-ruby/#{Usgs::VERSION}", debug: false)
+      @timeout    = timeout
+      @user_agent = user_agent
+      @debug = debug
     end
 
-    # Perform a GET request and parse JSON response
-    #
-    # @param path [String] API endpoint path
-    # @param query [Hash] Query parameters
-    # @return [Hash] Parsed JSON response
-    def get_json(path, query = {})
+    # Base URL for USGS Water Services
+    def base_url
+      "https://waterservices.usgs.gov/nwis"
+    end
+
+    # Public: Perform GET and return parsed JSON
+    def api_get(path, query = {})
       query = query.compact
       url   = "#{base_url}#{path}"
 
-      response = fetch_url(url, query: query, timeout: timeout, user_agent: user_agent)
-      JSON.parse(response.body)
+      # binding.pry
+      fetch_url(url, query: query, timeout: timeout, user_agent: user_agent)
     end
 
     private
 
-    # Low-level fetch with debug support
-    #
-    # @private
     def fetch_url(url, query: {}, timeout: 30, user_agent: nil)
-      uri = build_uri(url, query)
+      uri = URI(url)
+      uri.query = URI.encode_www_form(query) unless query.empty?
 
-      if Usgs.instance_variable_defined?(:@debug) && Usgs.instance_variable_get(:@debug)
-        puts "\n=== USGS API Request ==="
-        puts "URL: #{uri}"
-        puts "=======================\n"
-      end
+      puts "\n=== USGS Request ===\n#{uri}\n====================\n" if $DEBUG || ENV["USGS_DEBUG"]
 
       http_get(uri, timeout: timeout, user_agent: user_agent)
+    end
+
+    def http_get(uri, timeout: 30, user_agent: nil)
+      Net::HTTP.start(
+        uri.host,
+        uri.port,
+        use_ssl: true,
+        open_timeout: timeout,
+        read_timeout: timeout
+      ) do |http|
+        request = Net::HTTP::Get.new(uri)
+        request["User-Agent"] = user_agent if user_agent
+        request["Accept"]     = "application/json"
+
+        response = http.request(request)
+
+        if response.is_a?(Net::HTTPSuccess)
+          response
+        else
+          raise "USGS API Error #{response.code}: #{response.message}\n#{response.body}"
+        end
+      end
     end
   end
 end

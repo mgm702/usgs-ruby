@@ -11,8 +11,8 @@ module Usgs
         # Parsers::TimeSeriesParser.parse(response, timescale: timescale)
       end
 
-      def parse_instantaneous_values(response)
-        Parsers::InstantaneousValuesParser.parse(response)
+      def parse_time_series_values(response)
+        Parsers::TimeSeriesParser.parse(response)
       end
 
       def parse_statistics(response)

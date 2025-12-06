@@ -2,43 +2,45 @@
 
 module Usgs
   module Statistics
-    # Fetch daily statistics (all percentiles) for one or more sites
+    # Fetch statistics from USGS NWIS
     #
     # @param sites [String, Array<String>] USGS site ID(s)
-    # @param parameter_cd [Symbol, String, Array] e.g. :discharge, "00060"
+    # @param parameter_cd [Symbol, String, Array] e.g. :discharge
+    # @param report_type [Symbol] :daily, :monthly, or :annual (default: :daily)
+    # @param stat_year_type [String, nil] "water", "calendar", "all" — only for :annual
     #
     # @return [Array<Usgs::Models::Statistic>]
-    def get_stats(sites:, parameter_cd: nil)
-      site_list = Array(sites).join(",")
-      param_list = resolve_parameter_codes(parameter_cd)
+    #
+    # @example
+    #   Usgs.client.get_stats(sites: "06754000", report_type: :daily)
+    #   Usgs.client.get_stats(sites: "06754000", report_type: :monthly, parameter_cd: :discharge)
+    #   Usgs.client.get_stats(sites: "06754000", report_type: :annual, stat_year_type: "water")
+    #
+    def get_stats(sites:, parameter_cd: nil, report_type: :daily, stat_year_type: nil)
+      site_list   = Array(sites).join(",")
+      param_list  = resolve_parameter_codes(parameter_cd)
+      type_str    = report_type.to_s
+
+      unless %w[daily monthly annual].include?(type_str)
+        raise ArgumentError, "report_type must be :daily, :monthly, or :annual"
+      end
+
+      if type_str != "annual" && stat_year_type
+        raise ArgumentError, "stat_year_type is only valid when report_type: :annual"
+      end
 
       query = {
         format: "rdb,1.0",
         sites: site_list,
         parameterCd: param_list,
-        statReportType: "daily",   # fixed: always "daily"
+        statReportType: type_str,
         statTypeCd: "all"
-        # statYearType: removed — not allowed for daily stats
-      }.compact
-
-      binding.pry
-      raw = api_get("/stat/", query)
-      Parser.parse_statistics(raw.body).map { |row| Models::Statistic.new(row) }
-    end
-
-    private
-
-    def resolve_parameter_codes(codes)
-      return nil if codes.nil?
-
-      mapping = {
-        discharge:      "00060",
-        gage_height:    "00065",
-        temperature:    "00010",
-        precipitation:  "00045"
       }
 
-      Array(codes).map { |c| mapping[c.to_sym] || c.to_s }.join(",")
+      query[:statYearType] = stat_year_type if stat_year_type
+
+      raw = api_get("/stat/", query)
+      Parser.parse_statistics(raw.body).map { |row| Models::Statistic.new(row) }
     end
   end
 end

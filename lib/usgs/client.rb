@@ -3,8 +3,9 @@ require 'pry'
 
 module Usgs
   class Client
-    include Site
+    include DailyValues
     include InstantaneousValues
+    include Site
     include Statistics
 
     attr_reader :timeout, :user_agent

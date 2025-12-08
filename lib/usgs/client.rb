@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'pry'
 
 module Usgs
   class Client
@@ -21,12 +20,11 @@ module Usgs
       "https://waterservices.usgs.gov/nwis"
     end
 
-    # Public: Perform GET and return parsed JSON
+    # Public: Perform GET and return response from API
     def api_get(path, query = {})
       query = query.compact
       url   = "#{base_url}#{path}"
 
-      # binding.pry
       fetch_url(url, query: query, timeout: timeout, user_agent: user_agent)
     end
 

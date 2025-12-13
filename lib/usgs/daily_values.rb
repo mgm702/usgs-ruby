@@ -32,7 +32,6 @@ module Usgs
       }.compact
 
       response = api_get("/dv/", query)
-      binding.pry
       Parser.parse_time_series_values(JSON.parse(response.body))
     end
   end

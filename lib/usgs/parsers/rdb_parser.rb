@@ -16,14 +16,12 @@ module Usgs
 
           return [] if data_lines.empty?
 
-          # First non-comment line = field names (what we want)
           field_names_line = data_lines[0]
 
-          # Second line = field widths (5s, 15s, etc.) — we SKIP this
           data_start_index = if data_lines[1]&.match?(/\A(\d+[sd])\t/)
-                               2  # skip the width line
+                               2
                              else
-                               1  # no width line (older format)
+                               1
                              end
 
           column_names = field_names_line.split("\t")
@@ -34,7 +32,7 @@ module Usgs
           end.compact
         end
 
-        # Convenience for time series (iv, dv, etc.)
+        # For time series (iv, dv, etc.)
         def parse_time_series(text)
           rows = parse(text)
           rows.map do |row|

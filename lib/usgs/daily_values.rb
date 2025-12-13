@@ -27,7 +27,7 @@ module Usgs
         format: "json",
         sites: site_list,
         parameterCd: param_list,
-        startDT: format_date(start_date || (Time.now.utc - (24 * 60 * 60))),
+        startDT: format_date(start_date || (Time.now.utc - (48 * 60 * 60))),
         endDT: format_date(end_date || Time.now.utc)
       }.compact
 

@@ -20,11 +20,11 @@ module Usgs
 
         reading = readings.first
 
-        assert_kind_of Usgs::Models::Reading, reading
-        assert_respond_to reading, :site_no
-        assert_respond_to reading, :date_time
-        assert_respond_to reading, :value
-        assert_respond_to reading, :qualifiers
+        assert_kind_of Hash, reading
+        assert_includes reading.keys, :site_no
+        assert_includes reading.keys, :datetime
+        assert_includes reading.keys, :value
+        assert_includes reading.keys, :qualifiers
       end
     end
 
@@ -97,7 +97,7 @@ module Usgs
         refute_empty readings
 
         reading = readings.first
-        assert_kind_of Float, reading.value unless reading.value.nil?
+        assert_kind_of Float, reading[:value] unless reading[:value].nil?
       end
     end
 
@@ -114,8 +114,8 @@ module Usgs
 
         reading = readings.first
 
-        assert_respond_to reading, :datetime
-        assert_kind_of Date, reading.datetime unless reading.datetime.nil?
+        assert_includes reading.keys, :datetime
+        assert_kind_of String, reading[:datetime] unless reading[:datetime].nil?
       end
     end
   end

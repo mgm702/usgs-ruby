@@ -20,7 +20,16 @@ module Usgs
         ph:             "00400"
       }
 
-      Array(codes).map { |c| mapping[c.to_sym] || c.to_s }.join(",")
+      Array(codes).map do |c|
+        if c.is_a?(Symbol)
+          mapped = mapping[c]
+          raise ArgumentError, "Invalid parameter code: #{c}. Valid codes are: #{mapping.keys.join(', ')}" if mapped.nil?
+
+          mapped
+        else
+          c.to_s
+        end
+      end.join(",")
     end
 
     def format_date(date)

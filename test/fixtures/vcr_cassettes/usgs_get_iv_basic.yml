@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?endDT=2025-12-14T20:03&format=json&parameterCd=00060&sites=09038500&startDT=2025-12-13T20:03
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - usgs-ruby/1.0.0
+      Host:
+      - waterservices.usgs.gov
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sun, 14 Dec 2025 20:03:12 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Sun, 14 Dec 2025 20:18:13 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=09038500&parameterCd=00060&startDT=2025-12-13T20%3A03&endDT=2025-12-14T20%3A03","criteria":{"locationParam":"[ALL:09038500]","variableParam":"[00060]","timeParam":{"beginDateTime":"2025-12-13T20:03:00.000","endDateTime":"2025-12-14T20:03:00.000"},"parameter":[]},"note":[{"value":"[ALL:09038500]","title":"filter:sites"},{"value":"[mode=RANGE,
+        modifiedSince=null] interval={INTERVAL[2025-12-13T20:03:00.000Z/2025-12-14T20:03:00.000Z]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-14T20:03:13.844Z","title":"requestDT"},{"value":"ec367831-d927-11f0-9580-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"WILLIAMS
+        FORK BELOW WILLIAMS FORK RESERVOIR, CO","siteCode":[{"value":"09038500","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.03592778,"longitude":-106.2050139},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"14010001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08049","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T20:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T20:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T20:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T21:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T21:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T21:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T21:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T22:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T22:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T22:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T22:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T23:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T23:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T23:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-13T23:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T00:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T00:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T00:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T00:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T01:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T01:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T01:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T01:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T02:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T02:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T02:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T02:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T03:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T03:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T03:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T03:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T04:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T04:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T04:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T04:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T05:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T05:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T05:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T05:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T06:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T06:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T06:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T06:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T07:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T07:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T07:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T07:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T08:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T08:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T08:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T08:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T09:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T09:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T09:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T09:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T10:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T10:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T10:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T10:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T11:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T11:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T11:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T11:45:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T12:00:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T12:15:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T12:30:00.000-07:00"},{"value":"111","qualifiers":["P"],"dateTime":"2025-12-14T12:45:00.000-07:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":211533}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:09038500:00060:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Sun, 14 Dec 2025 20:03:13 GMT
+recorded_with: VCR 6.3.1

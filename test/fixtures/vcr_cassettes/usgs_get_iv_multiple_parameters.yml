@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?endDT=2025-12-14T20:03&format=json&parameterCd=00060,00065&sites=06754000&startDT=2025-12-13T20:03
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - usgs-ruby/1.0.0
+      Host:
+      - waterservices.usgs.gov
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sun, 14 Dec 2025 20:03:12 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Sun, 14 Dec 2025 20:18:12 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06754000&parameterCd=00060%2C00065&startDT=2025-12-13T20%3A03&endDT=2025-12-14T20%3A03","criteria":{"locationParam":"[ALL:06754000]","variableParam":"[00060,
+        00065]","timeParam":{"beginDateTime":"2025-12-13T20:03:00.000","endDateTime":"2025-12-14T20:03:00.000"},"parameter":[]},"note":[{"value":"[ALL:06754000]","title":"filter:sites"},{"value":"[mode=RANGE,
+        modifiedSince=null] interval={INTERVAL[2025-12-13T20:03:00.000Z/2025-12-14T20:03:00.000Z]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-14T20:03:12.969Z","title":"requestDT"},{"value":"ebb0f480-d927-11f0-9580-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Sun, 14 Dec 2025 20:03:12 GMT
+recorded_with: VCR 6.3.1

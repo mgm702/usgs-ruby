@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Usgs::Site
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Usgs::Site";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Usgs.html" title="Usgs (module)">Usgs</a></span></span>
+     &raquo; 
+    <span class="title">Site</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Usgs::Site
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Utils.html" title="Usgs::Utils (module)">Utils</a></span></dd>
+  </dl>
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="Client.html" title="Usgs::Client (class)">Client</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/usgs/site.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_sites-instance_method" title="#get_sites (instance method)">#<strong>get_sites</strong>(state_cd: nil, county_cd: nil, huc: nil, bBox: nil, site_name: nil, site_type: nil, site_status: &quot;all&quot;, parameter_cd: nil)  &#x21d2; Array&lt;Usgs::Models::Site&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Fetch USGS monitoring locations (sites).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Utils.html" title="Usgs::Utils (module)">Utils</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Utils.html#format_date-instance_method" title="Usgs::Utils#format_date (method)">#format_date</a></span>, <span class='object_link'><a href="Utils.html#format_datetime-instance_method" title="Usgs::Utils#format_datetime (method)">#format_datetime</a></span>, <span class='object_link'><a href="Utils.html#resolve_parameter_codes-instance_method" title="Usgs::Utils#resolve_parameter_codes (method)">#resolve_parameter_codes</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="get_sites-instance_method">
+  
+    #<strong>get_sites</strong>(state_cd: nil, county_cd: nil, huc: nil, bBox: nil, site_name: nil, site_type: nil, site_status: &quot;all&quot;, parameter_cd: nil)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Models/Site.html" title="Usgs::Models::Site (class)">Usgs::Models::Site</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Fetch USGS monitoring locations (sites)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Usgs.html" title="Usgs (module)">Usgs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_client'><span class='object_link'><a href="../Usgs.html#client-class_method" title="Usgs.client (method)">client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_sites'>get_sites</span><span class='lparen'>(</span><span class='label'>state_cd:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CO</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>parameter_cd:</span> <span class='symbol'>:discharge</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>state_cd</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Two-letter state code (e.g., “CO”)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>county_cd</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>FIPS county code (e.g., “08013”)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>huc</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>2-16 digit Hydrologic Unit Code</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>bBox</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>“west,south,east,north” in decimal degrees</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>site_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Text search in station name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>site_type</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>e.g., “ST” (stream), “GW”, “LK”, “WE”</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>site_status</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;all&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>“active”, “inactive”, “all” (default: “all”)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>parameter_cd</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Symbol</tt>, <tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>e.g. :discharge, “00060”, or [:discharge, :gage_height]</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Models/Site.html" title="Usgs::Models::Site (class)">Usgs::Models::Site</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if no major filter is provided</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/usgs/site.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_sites'>get_sites</span><span class='lparen'>(</span><span class='label'>state_cd:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>county_cd:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>huc:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>bBox:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>site_name:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+              <span class='label'>site_type:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>site_status:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>all</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>parameter_cd:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>format:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rdb,1.0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>stateCd:</span> <span class='id identifier rubyid_state_cd'>state_cd</span><span class='comma'>,</span>
+    <span class='label'>countyCd:</span> <span class='id identifier rubyid_county_cd'>county_cd</span><span class='comma'>,</span>
+    <span class='label'>huc:</span> <span class='id identifier rubyid_huc'>huc</span><span class='comma'>,</span>
+    <span class='label'>bBox:</span> <span class='id identifier rubyid_bBox'>bBox</span><span class='comma'>,</span>
+    <span class='label'>siteName:</span> <span class='id identifier rubyid_site_name'>site_name</span><span class='comma'>,</span>
+    <span class='label'>siteType:</span> <span class='id identifier rubyid_site_type'>site_type</span><span class='comma'>,</span>
+    <span class='label'>siteStatus:</span> <span class='id identifier rubyid_site_status'>site_status</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_parameter_cd'>parameter_cd</span>
+    <span class='id identifier rubyid_resolved'>resolved</span> <span class='op'>=</span> <span class='id identifier rubyid_resolve_parameter_codes'>resolve_parameter_codes</span><span class='lparen'>(</span><span class='id identifier rubyid_parameter_cd'>parameter_cd</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:parameterCd</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_resolved'>resolved</span> <span class='kw'>if</span> <span class='id identifier rubyid_resolved'>resolved</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_resolved'>resolved</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Validate for at least one major filter
+</span>  <span class='id identifier rubyid_major_keys'>major_keys</span> <span class='op'>=</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>stateCd</span><span class='words_sep'> </span><span class='tstring_content'>countyCd</span><span class='words_sep'> </span><span class='tstring_content'>huc</span><span class='words_sep'> </span><span class='tstring_content'>bBox</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span> <span class='op'>&amp;</span> <span class='id identifier rubyid_major_keys'>major_keys</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You must provide at least one major filter: state_cd, county_cd, huc or bBox</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_raw'>raw</span> <span class='op'>=</span> <span class='id identifier rubyid_api_get'>api_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/site/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Parser.html" title="Usgs::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse_sites'><span class='object_link'><a href="Parser.html#parse_sites-class_method" title="Usgs::Parser.parse_sites (method)">parse_sites</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_raw'>raw</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_row'>row</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="Models.html" title="Usgs::Models (module)">Models</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Models/Site.html" title="Usgs::Models::Site (class)">Site</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Models/Site.html#initialize-instance_method" title="Usgs::Models::Site#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Dec 15 21:52:18 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.2.2).
+</div>
+
+    </div>
+  </body>
+</html>

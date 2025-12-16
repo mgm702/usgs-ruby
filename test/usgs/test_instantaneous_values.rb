@@ -12,7 +12,7 @@ module Usgs
     def test_get_iv_basic
       VCR.use_cassette("usgs_get_iv_basic") do
         readings = @client.get_iv(
-          sites: "09038500",
+          sites: "06716500",
           parameter_cd: :discharge
         )
 
@@ -32,7 +32,7 @@ module Usgs
     def test_get_iv_with_datetime_range
       VCR.use_cassette("usgs_get_iv_datetime_range") do
         readings = @client.get_iv(
-          sites: "09038500",
+          sites: "06716500",
           parameter_cd: :discharge,
           start_date: DateTime.parse("2025-12-01T12:00"),
           end_date: DateTime.parse("2025-12-11T18:00")
@@ -47,7 +47,7 @@ module Usgs
     def test_get_iv_multiple_sites
       VCR.use_cassette("usgs_get_iv_multiple_sites") do
         readings = @client.get_iv(
-          sites: ["09038500", "06752000"],
+          sites: ["06716500", "06752000"],
           parameter_cd: :discharge
         )
 
@@ -90,7 +90,7 @@ module Usgs
     def test_iv_numeric_values
       VCR.use_cassette("usgs_get_iv_numeric") do
         readings = @client.get_iv(
-          sites: "09038500",
+          sites: "06716500",
           parameter_cd: :discharge,
           start_date: DateTime.parse("2025-12-01T12:00"),
           end_date: DateTime.parse("2025-12-11T18:00")
@@ -106,7 +106,7 @@ module Usgs
     def test_iv_datetime_formatting
       VCR.use_cassette("usgs_get_iv_datetimes") do
         readings = @client.get_iv(
-          sites: "09038500",
+          sites: "06716500",
           parameter_cd: :discharge,
           start_date: DateTime.parse("2025-12-01T12:00"),
           end_date: DateTime.parse("2025-12-11T18:00")

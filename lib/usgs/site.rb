@@ -41,9 +41,9 @@ module Usgs
       end
 
       # Validate for at least one major filter
-      major_keys = %i[stateCd countyCd huc bBox siteName].map(&:to_sym)
+      major_keys = %i[stateCd countyCd huc bBox].map(&:to_sym)
       if (query.keys & major_keys).empty?
-        raise ArgumentError, "You must provide at least one major filter: state_cd, county_cd, huc, bBox, or site_name"
+        raise ArgumentError, "You must provide at least one major filter: state_cd, county_cd, huc or bBox"
       end
 
       raw = api_get("/site/", query)

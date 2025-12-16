@@ -253,4 +253,7 @@ If you encounter any issues or have questions:
 
 ---
 
-**Like the gem?** Star the repository on [GitHub](https://github.com/YOUR_USERNAME/usgs-ruby)!
+## Like The Gem?
+
+If you like usgs-ruby follow the repository on [Github](https://github.com/mgm702/usgs-ruby) and if you are feeling extra nice, follow the author [mgm702](http://mgm702.com) on [Twitter](https://twitter.com/mgm702) or [Github](https://github.com/mgm702).
+

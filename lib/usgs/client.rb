@@ -1,10 +1,10 @@
 # frozen_string_literal: true
-require 'pry'
 
 module Usgs
   class Client
-    include Site
+    include DailyValues
     include InstantaneousValues
+    include Site
     include Statistics
 
     attr_reader :timeout, :user_agent
@@ -20,12 +20,11 @@ module Usgs
       "https://waterservices.usgs.gov/nwis"
     end
 
-    # Public: Perform GET and return parsed JSON
+    # Public: Perform GET and return response from API
     def api_get(path, query = {})
       query = query.compact
       url   = "#{base_url}#{path}"
 
-      # binding.pry
       fetch_url(url, query: query, timeout: timeout, user_agent: user_agent)
     end
 
@@ -33,7 +32,7 @@ module Usgs
 
     def fetch_url(url, query: {}, timeout: 30, user_agent: nil)
       uri = URI(url)
-      uri.query = URI.encode_www_form(query) unless query.empty?
+      uri.query = URI.encode_www_form(query).gsub('+', '%20') unless query.empty?
 
       puts "\n=== USGS Request ===\n#{uri}\n====================\n" if $DEBUG || ENV["USGS_DEBUG"]
 

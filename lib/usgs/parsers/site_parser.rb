@@ -11,4 +11,3 @@ module Usgs
     end
   end
 end
-

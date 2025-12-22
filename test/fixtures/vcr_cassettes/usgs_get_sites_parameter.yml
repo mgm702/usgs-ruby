@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 14 Dec 2025 20:52:46 GMT
+      - Mon, 22 Dec 2025 22:08:25 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Sun, 14 Dec 2025 21:07:46 GMT
+      - Mon, 22 Dec 2025 22:23:25 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -44,7 +44,7 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: "#\n#\n# US Geological Survey\n# retrieved: 2025-12-14 15:52:46 -05:00\t(caas01)\n#\n#
+      string: "#\n#\n# US Geological Survey\n# retrieved: 2025-12-22 17:08:26 -05:00\t(sdas01)\n#\n#
         The Site File stores location and general information about groundwater,\n#
         surface water, and meteorological sites\n# for sites in USA.\n#\n# File-format
         description:  http://help.waterdata.usgs.gov/faq/about-tab-delimited-output\n#
@@ -1362,7 +1362,9 @@ http_interactions:
         CREEK AT DURHAM, CO\tST\t39.09081474\t-108.607595\tF\tNAD83\t 4540\t 15\tNGVD29\t14010005\nUSGS\t09152900\tADOBE
         CREEK NEAR FRUITA, CO.\tST\t39.1369254\t-108.6973205\tF\tNAD83\t 4520.00\t
         15\tNGVD29\t14010005\nUSGS\t09153000\tCOLORADO RIVER NEAR FRUITA, CO.\tST\t39.137481\t-108.7309327\tF\tNAD83\t
-        4490.00\t 15\tNGVD29\t14010005\nUSGS\t09153270\tBIG SALT WASH AT FRUITA, CO.\tST\t39.16416667\t-108.7502611\tF\tNAD83\t4490\t1.6\tNAVD88\t14010005\nUSGS\t09153290\tREED
+        4490.00\t 15\tNGVD29\t14010005\nUSGS\t09153220\tLITTLE SALT WASH BLW GREENWAY
+        DRIVE AT FRUITA, CO\tST\t39.15931944\t-108.7437389\tS\tNAD83\t4476\t1\tNAVD88\t14010005\nUSGS\t09153270\tBIG
+        SALT WASH AT FRUITA, CO.\tST\t39.16416667\t-108.7502611\tF\tNAD83\t4490\t1.6\tNAVD88\t14010005\nUSGS\t09153290\tREED
         WASH NEAR MACK, CO.\tST\t39.2113692\t-108.8037133\tS\tNAD83\t 4505.00\t 20\tNGVD29\t14010005\nUSGS\t09153300\tREED
         WASH NEAR LOMA, CO.\tST\t39.1835917\t-108.7873237\tF\tNAD83\t 4470.00\t 15\tNGVD29\t14010005\nUSGS\t09153330\tWEST
         SALT CREEK NEAR CARBONERA, CO.\tST\t39.3963662\t-108.9814966\tF\tNAD83\t 5082.00\t
@@ -2003,5 +2005,5 @@ http_interactions:
         LA POUDRE R AT KINIKINIK, C.\tST\t40.70942479\t-105.748894\tM\tNAD83\t\t\t\t10190007\nUSGS\t404406103100401\tCEDAR
         CK BL UNNAMED TRIB IN SECT 22, T9N, R52W\tST\t40.73498756\t-103.1682598\tM\tNAD83\t\t\t\t10190012\nUSGS\t405903107375900\tFOURMILE
         CK AT BRIDGE ON ST HWY 13 NR BAGGS, WY.\tST\t40.9841319\t-107.6336799\tM\tNAD83\t\t\t\t14050003\n"
-  recorded_at: Sun, 14 Dec 2025 20:52:47 GMT
+  recorded_at: Mon, 22 Dec 2025 22:08:26 GMT
 recorded_with: VCR 6.3.1

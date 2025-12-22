@@ -11,19 +11,22 @@ module Usgs
       return nil if codes.nil?
 
       mapping = {
-        discharge:      "00060",
-        gage_height:    "00065",
-        temperature:    "00010",
-        precipitation:  "00045",
-        do:             "00300",
-        conductivity:   "00095",
-        ph:             "00400"
+        discharge: "00060",
+        gage_height: "00065",
+        temperature: "00010",
+        precipitation: "00045",
+        do: "00300",
+        conductivity: "00095",
+        ph: "00400"
       }
 
       Array(codes).map do |c|
         if c.is_a?(Symbol)
           mapped = mapping[c]
-          raise ArgumentError, "Invalid parameter code: #{c}. Valid codes are: #{mapping.keys.join(', ')}" if mapped.nil?
+          if mapped.nil?
+            raise ArgumentError,
+                  "Invalid parameter code: #{c}. Valid codes are: #{mapping.keys.join(', ')}"
+          end
 
           mapped
         else
@@ -34,13 +37,14 @@ module Usgs
 
     def format_date(date)
       Date.parse(date.to_s).strftime("%Y-%m-%d")
-    rescue
+    rescue StandardError
       Date.today.strftime("%Y-%m-%d")
     end
 
-    def format_datetime(dt)
-      return nil unless dt
-      Time.parse(dt.to_s).utc.strftime("%Y-%m-%dT%H:%M")
+    def format_datetime(datetime)
+      return nil unless datetime
+
+      Time.parse(datetime.to_s).utc.strftime("%Y-%m-%dT%H:%M")
     end
   end
 end

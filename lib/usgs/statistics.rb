@@ -21,13 +21,9 @@ module Usgs
       param_list  = resolve_parameter_codes(parameter_cd)
       type_str    = report_type.to_s
 
-      unless %w[daily monthly annual].include?(type_str)
-        raise ArgumentError, "report_type must be :daily, :monthly, or :annual"
-      end
+      raise ArgumentError, "report_type must be :daily, :monthly, or :annual" unless %w[daily monthly annual].include?(type_str)
 
-      if type_str != "annual" && stat_year_type
-        raise ArgumentError, "stat_year_type is only valid when report_type: :annual"
-      end
+      raise ArgumentError, "stat_year_type is only valid when report_type: :annual" if type_str != "annual" && stat_year_type
 
       query = {
         format: "rdb,1.0",

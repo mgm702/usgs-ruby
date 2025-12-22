@@ -4,6 +4,7 @@
 module Usgs
   module DailyValues
     include Utils
+
     # Fetch daily values (DV) from USGS NWIS
     #
     # @param sites [String, Array<String>] USGS site ID(s)

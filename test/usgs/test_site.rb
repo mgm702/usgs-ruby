@@ -77,7 +77,7 @@ module Usgs
 
     def test_get_sites_by_bbox
       VCR.use_cassette("usgs_get_sites_bbox") do
-        sites = @client.get_sites(bBox: "-105.5,39.5,-105.0,40.0")
+        sites = @client.get_sites(b_box: "-105.5,39.5,-105.0,40.0")
 
         assert_kind_of Array, sites
         refute_empty sites

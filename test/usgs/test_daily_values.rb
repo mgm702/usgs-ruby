@@ -45,7 +45,7 @@ module Usgs
     def test_get_dv_multiple_sites
       VCR.use_cassette("usgs_get_dv_multiple_sites") do
         readings = @client.get_dv(
-          sites: ["06754000", "06716500"],
+          sites: %w[06754000 06716500],
           parameter_cd: :discharge
         )
 
@@ -69,7 +69,7 @@ module Usgs
       VCR.use_cassette("usgs_get_dv_multiple_parameters") do
         readings = @client.get_dv(
           sites: "06716500",
-          parameter_cd: [:discharge, :gage_height]
+          parameter_cd: %i[discharge gage_height]
         )
 
         assert_kind_of Array, readings

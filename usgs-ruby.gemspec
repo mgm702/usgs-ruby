@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mattm3646@gmail.com"]
 
   spec.summary       = "A modern, clean Ruby client for USGS Water Services API"
-  spec.description   = "A lightweight, dependency-free Ruby gem for accessing USGS NWIS data (sites, instantaneous values, daily values) using JSON endpoints"
+  spec.description   = "A lightweight, dependency-free Ruby gem for accessing USGS NWIS API data (sites, instantaneous values, daily values)"
   spec.homepage      = "https://github.com/mgm702/usgs-ruby"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 3.0"

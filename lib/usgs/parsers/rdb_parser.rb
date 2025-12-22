@@ -27,8 +27,9 @@ module Usgs
           column_names = field_names_line.split("\t")
           data_lines[data_start_index..].map do |line|
             next if line.empty? || line.start_with?("#")
+
             values = line.split("\t")
-            Hash[column_names.zip(values)].transform_keys { |k| k.strip.to_sym }
+            column_names.zip(values).to_h.transform_keys { |k| k.strip.to_sym }
           end.compact
         end
 
@@ -40,10 +41,10 @@ module Usgs
             value = nil if value.nil? || value == "" || value == "-999999" || value.downcase.include?("ice")
 
             {
-              site_no:     row[:site_no]&.strip,
-              datetime:    row[:datetime] || row[:dateTime],
-              value:       value&.to_f,
-              code:        row[:value_cd] || row[:qualifiers],
+              site_no: row[:site_no]&.strip,
+              datetime: row[:datetime] || row[:dateTime],
+              value: value&.to_f,
+              code: row[:value_cd] || row[:qualifiers],
               parameter_cd: row[:parameter_cd] || row[:parm_cd]
             }.compact
           end

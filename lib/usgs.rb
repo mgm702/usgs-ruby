@@ -11,11 +11,12 @@ module Usgs
   @loader.setup
 
   extend Dry::Configurable
+
   setting :user_agent, default: -> { "Usgs Ruby Gem/#{VERSION}" }
   setting :timeout, default: 30
   setting :base_url, default: "https://waterservices.usgs.gov/nwis"
   setting :default_parameter, default: "DISCHRG"
-  setting :debug, default: true
+  setting :debug, default: false
 
   class << self
     attr_reader :loader

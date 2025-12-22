@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://waterservices.usgs.gov/nwis/dv/?endDT=2025-12-16&format=json&parameterCd=00060&sites=06754000,06716500&startDT=2025-12-14
+    uri: https://waterservices.usgs.gov/nwis/dv/?endDT=2025-12-22&format=json&parameterCd=00060&sites=06754000,06716500&startDT=2025-12-20
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 16 Dec 2025 04:33:22 GMT
+      - Mon, 22 Dec 2025 21:38:59 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Tue, 16 Dec 2025 04:48:22 GMT
+      - Mon, 22 Dec 2025 21:53:59 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -44,15 +44,15 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/dv/format=json&sites=06754000%2C06716500&parameterCd=00060&startDT=2025-12-14&endDT=2025-12-16","criteria":{"locationParam":"[ALL:06754000,
-        ALL:06716500]","variableParam":"[00060]","timeParam":{"beginDateTime":"2025-12-14T00:00:00.000","endDateTime":"2025-12-16T00:00:00.000"},"parameter":[]},"note":[{"value":"[ALL:06754000,
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/dv/format=json&sites=06754000%2C06716500&parameterCd=00060&startDT=2025-12-20&endDT=2025-12-22","criteria":{"locationParam":"[ALL:06754000,
+        ALL:06716500]","variableParam":"[00060]","timeParam":{"beginDateTime":"2025-12-20T00:00:00.000","endDateTime":"2025-12-22T00:00:00.000"},"parameter":[]},"note":[{"value":"[ALL:06754000,
         ALL:06716500]","title":"filter:sites"},{"value":"[mode=RANGE, modifiedSince=null]
-        interval={INTERVAL[2025-12-14T00:00:00.000-05:00/2025-12-16T00:00:00.000-05:00]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-16T04:33:22.371Z","title":"requestDT"},{"value":"5abaca20-da38-11f0-a721-005056beda50","title":"requestId"},{"value":"Provisional
+        interval={INTERVAL[2025-12-20T00:00:00.000-05:00/2025-12-22T00:00:00.000-05:00]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-22T21:38:59.917Z","title":"requestDT"},{"value":"a071a0c0-df7e-11f0-a43b-005056beda50","title":"requestId"},{"value":"Provisional
         data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
         for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"CLEAR
         CREEK NEAR LAWSON, CO","siteCode":[{"value":"06716500","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":39.7658209,"longitude":-105.6261123},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10190004","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08019","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
         ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
-        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"value":"Mean","name":"Statistic","optionCode":"00003"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"25.2","qualifiers":["P"],"dateTime":"2025-12-14T00:00:00.000"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"value":"Mean","name":"Statistic","optionCode":"00003"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"21.0","qualifiers":["P"],"dateTime":"2025-12-20T00:00:00.000"},{"value":"22.0","qualifiers":["P"],"dateTime":"2025-12-21T00:00:00.000"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
         data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":17562}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06716500:00060:00003"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
-  recorded_at: Tue, 16 Dec 2025 04:33:22 GMT
+  recorded_at: Mon, 22 Dec 2025 21:38:59 GMT
 recorded_with: VCR 6.3.1

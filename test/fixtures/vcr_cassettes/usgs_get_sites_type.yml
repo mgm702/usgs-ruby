@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 14 Dec 2025 20:52:37 GMT
+      - Mon, 22 Dec 2025 21:39:02 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Sun, 14 Dec 2025 21:07:37 GMT
+      - Mon, 22 Dec 2025 21:54:02 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -44,7 +44,7 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: "#\n#\n# US Geological Survey\n# retrieved: 2025-12-14 15:52:37 -05:00\t(vaas01)\n#\n#
+      string: "#\n#\n# US Geological Survey\n# retrieved: 2025-12-22 16:39:02 -05:00\t(vaas01)\n#\n#
         The Site File stores location and general information about groundwater,\n#
         surface water, and meteorological sites\n# for sites in USA.\n#\n# File-format
         description:  http://help.waterdata.usgs.gov/faq/about-tab-delimited-output\n#
@@ -7934,5 +7934,5 @@ http_interactions:
         FORK ENCAMPMENT\tST\t40.9877465\t-106.8083769\tF\tNAD83\t 8440\t 15\tNGVD29\t10180002\nUSGS\t405919106481500\tENCAMPMENT,
         CO\tST\t40.98857989\t-106.8047656\tF\tNAD83\t 8450\t 15\tNGVD29\t10180002\nUSGS\t405937107462500\tLITTLE
         SNAKE R AB THORNBURGH GULCH NR BAGGS, WY.\tST\t40.993576\t-107.77424\tM\tNAD83\t\t\t\t14050003\n"
-  recorded_at: Sun, 14 Dec 2025 20:52:37 GMT
+  recorded_at: Mon, 22 Dec 2025 21:39:02 GMT
 recorded_with: VCR 6.3.1

@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 14 Dec 2025 20:52:29 GMT
+      - Mon, 22 Dec 2025 21:39:01 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Sun, 14 Dec 2025 21:07:29 GMT
+      - Mon, 22 Dec 2025 21:54:02 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -44,7 +44,7 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: "#\n#\n# US Geological Survey\n# retrieved: 2025-12-14 15:52:29 -05:00\t(caas01)\n#\n#
+      string: "#\n#\n# US Geological Survey\n# retrieved: 2025-12-22 16:39:02 -05:00\t(vaas01)\n#\n#
         The Site File stores location and general information about groundwater,\n#
         surface water, and meteorological sites\n# for sites in USA.\n#\n# File-format
         description:  http://help.waterdata.usgs.gov/faq/about-tab-delimited-output\n#
@@ -2365,5 +2365,5 @@ http_interactions:
         5320.00\t2\tNGVD29\t10190003\nUSGS\t400452105082901\tSC00106905CAA1\tGW\t39.99304064\t-105.1419299\tM\tNAD83\t
         5520.00\t2\tNGVD29\t10190005\nUSGS\t400509105005701\tSC00106804BCA1\tGW\t39.99665109\t-105.0163697\tM\tNAD83\t
         5268.00\t2\tNGVD29\t10190003\n"
-  recorded_at: Sun, 14 Dec 2025 20:52:29 GMT
+  recorded_at: Mon, 22 Dec 2025 21:39:02 GMT
 recorded_with: VCR 6.3.1

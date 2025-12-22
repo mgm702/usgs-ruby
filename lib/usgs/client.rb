@@ -7,12 +7,12 @@ module Usgs
     include Site
     include Statistics
 
-    attr_reader :timeout, :user_agent
+    attr_reader :timeout, :user_agent, :debug
 
-    def initialize(timeout: 30, user_agent: "usgs-ruby/#{Usgs::VERSION}", debug: false)
+    def initialize(timeout: 30, user_agent: "usgs-ruby/#{Usgs::VERSION}", debug: nil)
       @timeout    = timeout
       @user_agent = user_agent
-      @debug = debug
+      @debug      = debug.nil? ? Usgs.config.debug : debug
     end
 
     # Base URL for USGS Water Services
@@ -34,7 +34,7 @@ module Usgs
       uri = URI(url)
       uri.query = URI.encode_www_form(query).gsub("+", "%20") unless query.empty?
 
-      puts "\n=== USGS Request ===\n#{uri}\n====================\n" if $DEBUG || ENV["USGS_DEBUG"]
+      puts "\n=== USGS Request ===\n#{uri}\n====================\n" if @debug
 
       http_get(uri, timeout: timeout, user_agent: user_agent)
     end

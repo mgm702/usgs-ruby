@@ -21,15 +21,14 @@ module Usgs
     # @example
     #   Usgs.client.get_sites(state_cd: "CO", parameter_cd: :discharge)
     #
-    def get_sites(state_cd: nil, county_cd: nil, huc: nil, bBox: nil, site_name: nil,
+    def get_sites(state_cd: nil, county_cd: nil, huc: nil, b_box: nil, site_name: nil,
                   site_type: nil, site_status: "all", parameter_cd: nil)
-
       query = {
         format: "rdb,1.0",
         stateCd: state_cd,
         countyCd: county_cd,
         huc: huc,
-        bBox: bBox,
+        bBox: b_box,
         siteName: site_name,
         siteType: site_type,
         siteStatus: site_status
@@ -42,9 +41,7 @@ module Usgs
 
       # Validate for at least one major filter
       major_keys = %i[stateCd countyCd huc bBox].map(&:to_sym)
-      if (query.keys & major_keys).empty?
-        raise ArgumentError, "You must provide at least one major filter: state_cd, county_cd, huc or bBox"
-      end
+      raise ArgumentError, "You must provide at least one major filter: state_cd, county_cd, huc or b_box" if (query.keys & major_keys).empty?
 
       raw = api_get("/site/", query)
       Parser.parse_sites(raw.body).map { |row| Models::Site.new(row) }

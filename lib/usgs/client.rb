@@ -32,7 +32,7 @@ module Usgs
 
     def fetch_url(url, query: {}, timeout: 30, user_agent: nil)
       uri = URI(url)
-      uri.query = URI.encode_www_form(query).gsub('+', '%20') unless query.empty?
+      uri.query = URI.encode_www_form(query).gsub("+", "%20") unless query.empty?
 
       puts "\n=== USGS Request ===\n#{uri}\n====================\n" if $DEBUG || ENV["USGS_DEBUG"]
 
@@ -53,11 +53,9 @@ module Usgs
 
         response = http.request(request)
 
-        if response.is_a?(Net::HTTPSuccess)
-          response
-        else
-          raise "USGS API Error #{response.code}: #{response.message}\n#{response.body}"
-        end
+        raise "USGS API Error #{response.code}: #{response.message}\n#{response.body}" unless response.is_a?(Net::HTTPSuccess)
+
+        response
       end
     end
   end

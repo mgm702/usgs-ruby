@@ -50,7 +50,7 @@ module Usgs
       attr_accessor(*ATTRIBUTES) # :nodoc:
 
       def initialize(attrs = {})
-        attrs = attrs.is_a?(Hash) ? attrs : {}
+        attrs = {} unless attrs.is_a?(Hash)
         attrs[:metadata] ||= {}
         ATTRIBUTES.each do |attr|
           instance_variable_set(:"@#{attr}", attrs[attr]) if attrs.key?(attr)

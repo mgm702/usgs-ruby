@@ -38,13 +38,13 @@ module Usgs
             datetime = datetime[0..9] if datetime&.include?("T00:00:00.000")
 
             {
-              site_no:      site_no,
+              site_no: site_no,
               parameter_cd: parameter_cd,
-              datetime:     datetime,
-              value:        value,
-              qualifiers:   v["qualifiers"],
-              unit:         unit,
-              metadata:     {}
+              datetime: datetime,
+              value: value,
+              qualifiers: v["qualifiers"],
+              unit: unit,
+              metadata: {}
             }
           end
         end

@@ -7,6 +7,8 @@ require "minitest/autorun"
 require "minitest/reporters"
 require "webmock/minitest"
 require "vcr"
+require "active_support"
+require "active_support/testing/time_helpers"
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
@@ -26,6 +28,11 @@ VCR.configure do |config|
       end
     end
   end
+
+  config.default_cassette_options = {
+    record: :once,
+    match_requests_on: [:method, VCR.request_matchers.uri_without_params(:startDT, :endDT)]
+  }
 end
 
 Usgs.config.user_agent = -> { "USGS Test" }

@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 22 Dec 2025 21:39:00 GMT
+      - Mon, 22 Dec 2025 22:08:33 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Mon, 22 Dec 2025 21:54:00 GMT
+      - Mon, 22 Dec 2025 22:23:33 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -45,12 +45,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/dv/format=json&sites=06716500&parameterCd=00060&startDT=2023-06-01&endDT=2023-06-30","criteria":{"locationParam":"[ALL:06716500]","variableParam":"[00060]","timeParam":{"beginDateTime":"2023-06-01T00:00:00.000","endDateTime":"2023-06-30T00:00:00.000"},"parameter":[]},"note":[{"value":"[ALL:06716500]","title":"filter:sites"},{"value":"[mode=RANGE,
-        modifiedSince=null] interval={INTERVAL[2023-06-01T00:00:00.000-04:00/2023-06-30T00:00:00.000-04:00]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-22T21:39:00.232Z","title":"requestDT"},{"value":"a0a1b170-df7e-11f0-a43b-005056beda50","title":"requestId"},{"value":"Provisional
+        modifiedSince=null] interval={INTERVAL[2023-06-01T00:00:00.000-04:00/2023-06-30T00:00:00.000-04:00]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-22T22:08:33.325Z","title":"requestDT"},{"value":"c17a36c0-df82-11f0-8e9e-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
         data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
-        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"CLEAR
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"CLEAR
         CREEK NEAR LAWSON, CO","siteCode":[{"value":"06716500","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":39.7658209,"longitude":-105.6261123},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10190004","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08019","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
         ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
         Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"value":"Mean","name":"Statistic","optionCode":"00003"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"440","qualifiers":["A"],"dateTime":"2023-06-01T00:00:00.000"},{"value":"440","qualifiers":["A"],"dateTime":"2023-06-02T00:00:00.000"},{"value":"414","qualifiers":["A"],"dateTime":"2023-06-03T00:00:00.000"},{"value":"413","qualifiers":["A"],"dateTime":"2023-06-04T00:00:00.000"},{"value":"428","qualifiers":["A"],"dateTime":"2023-06-05T00:00:00.000"},{"value":"451","qualifiers":["A"],"dateTime":"2023-06-06T00:00:00.000"},{"value":"506","qualifiers":["A"],"dateTime":"2023-06-07T00:00:00.000"},{"value":"554","qualifiers":["A"],"dateTime":"2023-06-08T00:00:00.000"},{"value":"576","qualifiers":["A"],"dateTime":"2023-06-09T00:00:00.000"},{"value":"557","qualifiers":["A"],"dateTime":"2023-06-10T00:00:00.000"},{"value":"574","qualifiers":["A"],"dateTime":"2023-06-11T00:00:00.000"},{"value":"560","qualifiers":["A"],"dateTime":"2023-06-12T00:00:00.000"},{"value":"507","qualifiers":["A"],"dateTime":"2023-06-13T00:00:00.000"},{"value":"474","qualifiers":["A"],"dateTime":"2023-06-14T00:00:00.000"},{"value":"488","qualifiers":["A"],"dateTime":"2023-06-15T00:00:00.000"},{"value":"524","qualifiers":["A"],"dateTime":"2023-06-16T00:00:00.000"},{"value":"508","qualifiers":["A"],"dateTime":"2023-06-17T00:00:00.000"},{"value":"477","qualifiers":["A"],"dateTime":"2023-06-18T00:00:00.000"},{"value":"509","qualifiers":["A"],"dateTime":"2023-06-19T00:00:00.000"},{"value":"544","qualifiers":["A"],"dateTime":"2023-06-20T00:00:00.000"},{"value":"564","qualifiers":["A"],"dateTime":"2023-06-21T00:00:00.000"},{"value":"612","qualifiers":["A"],"dateTime":"2023-06-22T00:00:00.000"},{"value":"638","qualifiers":["A"],"dateTime":"2023-06-23T00:00:00.000"},{"value":"606","qualifiers":["A"],"dateTime":"2023-06-24T00:00:00.000"},{"value":"571","qualifiers":["A"],"dateTime":"2023-06-25T00:00:00.000"},{"value":"559","qualifiers":["A"],"dateTime":"2023-06-26T00:00:00.000"},{"value":"552","qualifiers":["A"],"dateTime":"2023-06-27T00:00:00.000"},{"value":"556","qualifiers":["A"],"dateTime":"2023-06-28T00:00:00.000"},{"value":"570","qualifiers":["A"],"dateTime":"2023-06-29T00:00:00.000"},{"value":"545","qualifiers":["A"],"dateTime":"2023-06-30T00:00:00.000"}],"qualifier":[{"qualifierCode":"A","qualifierDescription":"Approved
         for publication -- Processing and review completed.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":17562}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06716500:00060:00003"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
-  recorded_at: Mon, 22 Dec 2025 21:39:00 GMT
+  recorded_at: Mon, 22 Dec 2025 22:08:33 GMT
 recorded_with: VCR 6.3.1

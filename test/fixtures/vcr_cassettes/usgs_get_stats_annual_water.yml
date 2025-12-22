@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 22 Dec 2025 21:39:08 GMT
+      - Mon, 22 Dec 2025 22:08:28 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Mon, 22 Dec 2025 21:54:09 GMT
+      - Mon, 22 Dec 2025 22:23:28 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -45,7 +45,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: "#\n#\n# US Geological Survey, Water Resources Data\n# retrieved: 2025-12-22
-        16:39:09 -05:00\t(natwebcaas01)\n#\n# This file contains USGS Annual Statistics\n#\n#
+        17:08:29 -05:00\t(natwebvaas01)\n#\n# This file contains USGS Annual Statistics\n#\n#
         Note:The statistics generated are based on approved daily-mean data and may
         not match those published by the USGS in official publications.\n# The user
         is responsible for assessment and use of statistics from this site.\n# For
@@ -60,5 +60,5 @@ http_interactions:
         Data heading explanations.\n# year_nu     ... Water year for value.\n# mean_va
         \    ... Mean of daily mean values for this month.\n# count_nu    ... Number
         of values used in the calculation.\n#\nagency_cd\tsite_no\tparameter_cd\tts_id\tloc_web_ds\tyear_nu\tmean_va\tcount_nu\n5s\t15s\t5s\t10n\t15s\t4s\t12n\t8n\nUSGS\t06716500\t00060\t17562\t\t1947\t195.0\t365\nUSGS\t06716500\t00060\t17562\t\t1948\t141.5\t366\nUSGS\t06716500\t00060\t17562\t\t1949\t163.0\t365\nUSGS\t06716500\t00060\t17562\t\t1950\t138.5\t365\nUSGS\t06716500\t00060\t17562\t\t1951\t181.3\t365\nUSGS\t06716500\t00060\t17562\t\t1952\t188.4\t366\nUSGS\t06716500\t00060\t17562\t\t1953\t147.2\t365\nUSGS\t06716500\t00060\t17562\t\t1954\t72.3\t365\nUSGS\t06716500\t00060\t17562\t\t1955\t112.1\t365\nUSGS\t06716500\t00060\t17562\t\t1956\t147.8\t366\nUSGS\t06716500\t00060\t17562\t\t1957\t213.3\t365\nUSGS\t06716500\t00060\t17562\t\t1958\t132.3\t365\nUSGS\t06716500\t00060\t17562\t\t1959\t118.4\t365\nUSGS\t06716500\t00060\t17562\t\t1960\t132.1\t366\nUSGS\t06716500\t00060\t17562\t\t1961\t126.3\t365\nUSGS\t06716500\t00060\t17562\t\t1962\t151.1\t365\nUSGS\t06716500\t00060\t17562\t\t1963\t77.5\t365\nUSGS\t06716500\t00060\t17562\t\t1964\t99.2\t366\nUSGS\t06716500\t00060\t17562\t\t1965\t202.4\t365\nUSGS\t06716500\t00060\t17562\t\t1966\t84.0\t365\nUSGS\t06716500\t00060\t17562\t\t1967\t107.9\t365\nUSGS\t06716500\t00060\t17562\t\t1968\t120.0\t366\nUSGS\t06716500\t00060\t17562\t\t1969\t152.7\t365\nUSGS\t06716500\t00060\t17562\t\t1970\t174.3\t365\nUSGS\t06716500\t00060\t17562\t\t1971\t167.1\t365\nUSGS\t06716500\t00060\t17562\t\t1972\t118.6\t366\nUSGS\t06716500\t00060\t17562\t\t1973\t145.2\t365\nUSGS\t06716500\t00060\t17562\t\t1974\t145.2\t365\nUSGS\t06716500\t00060\t17562\t\t1975\t147.9\t365\nUSGS\t06716500\t00060\t17562\t\t1976\t110.8\t366\nUSGS\t06716500\t00060\t17562\t\t1977\t84.4\t365\nUSGS\t06716500\t00060\t17562\t\t1978\t140.0\t365\nUSGS\t06716500\t00060\t17562\t\t1979\t135.3\t365\nUSGS\t06716500\t00060\t17562\t\t1980\t153.6\t366\nUSGS\t06716500\t00060\t17562\t\t1981\t78.7\t365\nUSGS\t06716500\t00060\t17562\t\t1982\t140.7\t365\nUSGS\t06716500\t00060\t17562\t\t1983\t207.2\t365\nUSGS\t06716500\t00060\t17562\t\t1984\t225.4\t366\nUSGS\t06716500\t00060\t17562\t\t1985\t143.7\t365\nUSGS\t06716500\t00060\t17562\t\t1995\t214.4\t365\nUSGS\t06716500\t00060\t17562\t\t1996\t178.0\t366\nUSGS\t06716500\t00060\t17562\t\t1997\t197.6\t365\nUSGS\t06716500\t00060\t17562\t\t1998\t131.9\t365\nUSGS\t06716500\t00060\t17562\t\t1999\t178.1\t365\nUSGS\t06716500\t00060\t17562\t\t2000\t135.9\t366\nUSGS\t06716500\t00060\t17562\t\t2001\t130.5\t365\nUSGS\t06716500\t00060\t17562\t\t2002\t60.0\t365\nUSGS\t06716500\t00060\t17562\t\t2003\t146.4\t365\nUSGS\t06716500\t00060\t17562\t\t2004\t84.9\t366\nUSGS\t06716500\t00060\t17562\t\t2005\t115.4\t365\nUSGS\t06716500\t00060\t17562\t\t2006\t131.4\t365\nUSGS\t06716500\t00060\t17562\t\t2007\t150.0\t365\nUSGS\t06716500\t00060\t17562\t\t2008\t138.6\t366\nUSGS\t06716500\t00060\t17562\t\t2009\t148.3\t365\nUSGS\t06716500\t00060\t17562\t\t2010\t132.1\t365\nUSGS\t06716500\t00060\t17562\t\t2011\t223.9\t365\nUSGS\t06716500\t00060\t17562\t\t2012\t75.9\t366\nUSGS\t06716500\t00060\t17562\t\t2013\t128.7\t365\nUSGS\t06716500\t00060\t17562\t\t2014\t195.3\t365\nUSGS\t06716500\t00060\t17562\t\t2015\t167.7\t365\nUSGS\t06716500\t00060\t17562\t\t2016\t137.7\t366\nUSGS\t06716500\t00060\t17562\t\t2017\t153.4\t365\nUSGS\t06716500\t00060\t17562\t\t2018\t97.1\t365\nUSGS\t06716500\t00060\t17562\t\t2019\t151.5\t365\nUSGS\t06716500\t00060\t17562\t\t2020\t108.9\t366\nUSGS\t06716500\t00060\t17562\t\t2021\t98.8\t365\nUSGS\t06716500\t00060\t17562\t\t2022\t95.8\t365\nUSGS\t06716500\t00060\t17562\t\t2023\t126.0\t365\nUSGS\t06716500\t00060\t17562\t\t2024\t116.0\t366\n"
-  recorded_at: Mon, 22 Dec 2025 21:39:09 GMT
+  recorded_at: Mon, 22 Dec 2025 22:08:29 GMT
 recorded_with: VCR 6.3.1

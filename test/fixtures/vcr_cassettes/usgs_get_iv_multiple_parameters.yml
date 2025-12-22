@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://waterservices.usgs.gov/nwis/iv/?endDT=2025-12-22T21:39&format=json&parameterCd=00060,00065&sites=06754000&startDT=2025-12-21T21:39
+    uri: https://waterservices.usgs.gov/nwis/iv/?endDT=2025-12-22T22:08&format=json&parameterCd=00060,00065&sites=06754000&startDT=2025-12-21T22:08
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 22 Dec 2025 21:39:09 GMT
+      - Mon, 22 Dec 2025 22:08:31 GMT
       Server:
       - Apache
       Strict-Transport-Security:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=900
       Expires:
-      - Mon, 22 Dec 2025 21:54:10 GMT
+      - Mon, 22 Dec 2025 22:23:31 GMT
       X-Ua-Compatible:
       - IE=edge,chrome=1
       Access-Control-Allow-Origin:
@@ -44,10 +44,10 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06754000&parameterCd=00060%2C00065&startDT=2025-12-21T21%3A39&endDT=2025-12-22T21%3A39","criteria":{"locationParam":"[ALL:06754000]","variableParam":"[00060,
-        00065]","timeParam":{"beginDateTime":"2025-12-21T21:39:00.000","endDateTime":"2025-12-22T21:39:00.000"},"parameter":[]},"note":[{"value":"[ALL:06754000]","title":"filter:sites"},{"value":"[mode=RANGE,
-        modifiedSince=null] interval={INTERVAL[2025-12-21T21:39:00.000Z/2025-12-22T21:39:00.000Z]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-22T21:39:10.315Z","title":"requestDT"},{"value":"a6a43ca0-df7e-11f0-8fd5-005056beda50","title":"requestId"},{"value":"Provisional
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06754000&parameterCd=00060%2C00065&startDT=2025-12-21T22%3A08&endDT=2025-12-22T22%3A08","criteria":{"locationParam":"[ALL:06754000]","variableParam":"[00060,
+        00065]","timeParam":{"beginDateTime":"2025-12-21T22:08:00.000","endDateTime":"2025-12-22T22:08:00.000"},"parameter":[]},"note":[{"value":"[ALL:06754000]","title":"filter:sites"},{"value":"[mode=RANGE,
+        modifiedSince=null] interval={INTERVAL[2025-12-21T22:08:00.000Z/2025-12-22T22:08:00.000Z]}","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2025-12-22T22:08:31.055Z","title":"requestDT"},{"value":"c01fd6e0-df82-11f0-a55e-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
         data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
-        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[]},"nil":false,"globalScope":true,"typeSubstituted":false}'
-  recorded_at: Mon, 22 Dec 2025 21:39:10 GMT
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Mon, 22 Dec 2025 22:08:31 GMT
 recorded_with: VCR 6.3.1

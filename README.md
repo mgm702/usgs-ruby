@@ -226,7 +226,7 @@ Please make sure that your commit messages are clear and understandable.
 
 ## **Documentation**
 
-Full API documentation is available at [https://YOUR_USERNAME.github.io/usgs-ruby](https://YOUR_USERNAME.github.io/usgs-ruby)
+Full API documentation is available at [https://mgm702.github.io/usgs-ruby](https://YOUR_USERNAME.github.io/usgs-ruby)
 
 ## **Resources**
 

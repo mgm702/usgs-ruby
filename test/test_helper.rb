@@ -7,8 +7,6 @@ require "minitest/autorun"
 require "minitest/reporters"
 require "webmock/minitest"
 require "vcr"
-require "active_support"
-require "active_support/testing/time_helpers"
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 

@@ -3,6 +3,7 @@
 module Usgs
   module InstantaneousValues
     include Utils
+
     # Fetch instantaneous values (IV) from USGS NWIS
     #
     # @param sites [String, Array<String>] One or more USGS site IDs

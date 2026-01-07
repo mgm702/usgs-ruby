@@ -61,7 +61,7 @@ stats = client.get_stats(sites: "06754000", report_type: :daily)
 
 ## **Available Endpoints**
 
-The `usgs-ruby` gem provides access to all major USGS Water Services endpoints through an intuitive interface. For detailed documentation on each endpoint and its methods, please visit our [documentation site](https://YOUR_USERNAME.github.io/usgs-ruby).
+The `usgs-ruby` gem provides access to all major USGS Water Services endpoints through an intuitive interface. For detailed documentation on each endpoint and its methods, please visit our [documentation site](https://mgm702.github.io/usgs-ruby).
 
 ### Key Modules:
 
@@ -226,7 +226,7 @@ Please make sure that your commit messages are clear and understandable.
 
 ## **Documentation**
 
-Full API documentation is available at [https://mgm702.github.io/usgs-ruby](https://YOUR_USERNAME.github.io/usgs-ruby)
+Full API documentation is available at [https://mgm702.github.io/usgs-ruby](https://mgm702.github.io/usgs-ruby)
 
 ## **Resources**
 
@@ -247,8 +247,8 @@ The usgs-ruby gem is licensed under the MIT license. See [LICENSE](LICENSE) for 
 
 If you encounter any issues or have questions:
 
-1. Check the [documentation](https://YOUR_USERNAME.github.io/usgs-ruby)
-2. Search existing [GitHub Issues](https://github.com/YOUR_USERNAME/usgs-ruby/issues)
+1. Check the [documentation](https://mgm702.github.io/usgs-ruby)
+2. Search existing [GitHub Issues](https://github.com/mgm702/usgs-ruby/issues)
 3. Open a new issue with a clear description and example code
 
 ---

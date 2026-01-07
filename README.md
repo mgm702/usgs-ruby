@@ -1,6 +1,6 @@
 # **usgs-ruby**
 
-[![Build Status](https://github.com/mgm702/usgs-ruby/actions/workflows/ci.yml/badge.svg)](https://github.com/mgm702/usgs-ruby/actions)
+[![Build Status](https://github.com/mgm702/usgs-ruby/actions/workflows/main.yml/badge.svg)](https://github.com/mgm702/usgs-ruby/actions)
 [![Gem Version](https://badge.fury.io/rb/usgs-ruby.svg)](https://badge.fury.io/rb/usgs-ruby)
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 

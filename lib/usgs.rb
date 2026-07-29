@@ -2,7 +2,6 @@
 
 require "zeitwerk"
 require "dry-configurable"
-require "httparty"
 require "json"
 
 module Usgs
